@@ -3,15 +3,15 @@
     var saveMode = execObj.getEventArgs().getSaveMode();
 
     if (saveMode === 1) {
-        alert("Manual Save");
+    	Xrm.Utility.alertDialog("Manual Save");
     }
 
     if (saveMode === 2) {
-        alert("Save and Close");
+    	Xrm.Utility.alertDialog("Save and Close");
     }
 
     if (saveMode === 70) {
-        alert("Auto Save");
+    	Xrm.Utility.alertDialog("Auto Save");
         execObj.getEventArgs().preventDefault();
     }  
 

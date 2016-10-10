@@ -2,11 +2,11 @@
 
     var name = Xrm.Page.getAttribute("lat_name").getValue();
 
-    alert(name);
+    Xrm.Utility.alertDialog(name);
 
     var newValue = "Hello CRMUG";
 
-    Xrm.Page.getAttribute("lat_name").setValue(newValue);
+    Xrm.Page.getAttribute("lat_name2").setValue(newValue);
 
 }
 
@@ -14,9 +14,11 @@ function GetSetLookupValue() {
 
     var account = Xrm.Page.getAttribute("lat_accountlookup").getValue();
 
+	if (!account) return; //Check if populated before using
+
     var accountName = account[0].name;
 
-    alert(accountName);
+    Xrm.Utility.alertDialog(accountName);
 
     var newAccount = new Array();
     newAccount[0] = new Object();
@@ -24,5 +26,5 @@ function GetSetLookupValue() {
     newAccount[0].name = "A. Datum Corporation (sample)";
     newAccount[0].entityType = "account";
 
-    Xrm.Page.getAttribute("lat_accountlookup").setValue(newAccount);
+    Xrm.Page.getAttribute("lat_accountlookup2").setValue(newAccount);
 }

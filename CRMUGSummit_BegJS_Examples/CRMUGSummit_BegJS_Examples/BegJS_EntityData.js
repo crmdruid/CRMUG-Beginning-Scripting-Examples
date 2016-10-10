@@ -2,7 +2,7 @@
     
     var entityId = Xrm.Page.data.entity.getId();
 
-    alert(entityId);
+    Xrm.Utility.alertDialog(entityId);
 
 }
 
@@ -10,6 +10,6 @@ function GetRecordType() {
     
     var entityName = Xrm.Page.data.entity.getEntityName();
 
-    alert(entityName);
+    Xrm.Utility.alertDialog(entityName);
 
 }

@@ -3,15 +3,15 @@
     var formType = Xrm.Page.ui.getFormType();
 
     if (formType === 1) {
-        alert("New Record");
+    	Xrm.Utility.alertDialog("New Record");
     }
 
     if (formType === 2) {
-        alert("Existing Editable Record");
+    	Xrm.Utility.alertDialog("Existing Editable Record");
     }
 
     if (formType === 4) {
-        alert("Inactive Record");
+    	Xrm.Utility.alertDialog("Inactive Record");
     }
 
 }
